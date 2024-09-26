@@ -17,7 +17,7 @@ const Hero = ({ moods, selectedMood, setSelectedMood }) => {
               you.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-8">
+          <div className="grid grid-cols-2 gap-4 mt-8 sm:grid-cols-3">
             {moods.map((mood) => (
               <button
                 key={mood.name}
@@ -33,12 +33,12 @@ const Hero = ({ moods, selectedMood, setSelectedMood }) => {
               </button>
             ))}
           </div>
-          <div className="h-16 flex items-center justify-center mt-6">
+          <div className="flex items-center justify-center h-16 mt-6">
             {selectedMood && (
               <Link to={`/movies/${selectedMood}`}>
-                <button className="bg-red-600 text-white hover:bg-red-700 rounded-lg px-4 py-4 flex items-center">
+                <button className="flex items-center px-4 py-4 text-white bg-red-600 rounded-lg hover:bg-red-700">
                   Find Movies for &apos;{selectedMood}&apos; Mood
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </button>
               </Link>
             )}
